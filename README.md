@@ -196,6 +196,9 @@ Everything within the formData object will be sent as a notification and stored 
  - [ ] Make emails pretty
  - [ ] Allow providers to be extendable on a per project basis (similar to how email providers work)
  - [ ] Allow selection which notifications are sent to which people
+ - [ ] Convert to TS
+ - [ ] Add eslint
+ - [ ] Remove Twilio SDK in favor of HTTP
 
 ## ⭐️Did you find this helpful?
 If you found this plugin helpful give it a star?
