@@ -1,7 +1,6 @@
 'use strict';
 module.exports = ({strapi}) => ({
   async send(config, data){
-    console.log("sending email")
     let recipients = await strapi.query('plugin::ezforms.recipient').findMany();
     let message = ""
     //Loop through data and construct message from data object

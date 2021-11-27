@@ -20,12 +20,9 @@ module.exports = {
     }
 
     //sends notifications
-    console.log("Sending Notifc")
     for (const provider of strapi.config.get('plugin.ezforms.notificationProviders')) {
       if (provider.enabled) {
         try {
-          console.log("provider")
-          console.log(provider)
           await strapi.plugin('ezforms').service(provider.name).send(provider.config, ctx.request.body.formData)
         } catch (e) {
           strapi.log.error(e)
