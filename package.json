@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-ezforms",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "This is the description of the plugin.",
   "strapi": {
     "name": "ezForms",
@@ -12,11 +12,15 @@
     "twilio": "^3.71.2"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Excl Networks Inc."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/excl-networks/strapi-plugin-ezforms"
   },
   "maintainers": [
     {
-      "name": "A Strapi developer"
+      "name": "Excl Networks Inc."
     }
   ],
   "engines": {

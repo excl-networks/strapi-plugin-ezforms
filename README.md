@@ -6,6 +6,9 @@ notifications, and store the data in your database.
 ## Installation
 
 `npm install strapi-plugin-ezforms`
+
+or
+
 `yarn add strapi-plugin-ezforms`
 
 ## Configuration
@@ -178,6 +181,11 @@ Everything within the formData object will be sent as a notification and stored 
   });
 ```
 
+## Links
+
+ - [NPM Package](https://www.npmjs.com/package/strapi-plugin-ezforms)
+ - [Github](https://github.com/excl-networks/strapi-plugin-ezforms)
+ - [MIT License](LICENSE.md)
 
 ## TODO
 
@@ -185,7 +193,7 @@ Everything within the formData object will be sent as a notification and stored 
  - [ ] Add more notification providers
  - [ ] Allow disabling db write
  - [ ] Make emails pretty
- - [ ] Allow providers to be extenable on a per project basis (similar to how email providers work)
+ - [ ] Allow providers to be extendable on a per project basis (similar to how email providers work)
  - [ ] Allow selection which notifications are sent to which people
 
 ## ⭐️Did you find this helpful?
