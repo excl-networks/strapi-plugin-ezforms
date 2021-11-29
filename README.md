@@ -18,7 +18,8 @@ _Use `env('YOUR_SECRET')` if you would like to store secrets in your env_
 In your `/config/plugins.js`
 
 ```
-
+ezforms:{
+  config:{
     captchaProvider: {
       name: 'your-provider',
       config: {
@@ -34,13 +35,16 @@ In your `/config/plugins.js`
         }
       }
     ]
+  }
+}
 
 ```
 
 ### Example Configuration
 
 ```
-config:{
+ezforms:{
+    config:{
       captchaProvider: {
         name: 'recaptcha',
         config: {
@@ -67,6 +71,7 @@ config:{
         }
       ]
     }
+}
 ```
 
 ### Strapi Admin Panel Configuration
