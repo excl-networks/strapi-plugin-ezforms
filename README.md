@@ -8,6 +8,11 @@
 This plugin allows you to easily consume forms from your front end and automatically reject spam, send out
 notifications, and store the data in your database.
 
+
+_Objective:_
+
+_The objective of ez forms is to have a really simple and fast way to integrate forms with notifications without a lot of setup.  We will be continuing to build features but we are going to keep this plugin simple to setup. Meaning features like server side form validation and heavy customiztations will most likely never be added to this forms plugin. If you need something more customized you should look into making a custom controller._
+
 ## Installation
 
 `npm install strapi-plugin-ezforms`
@@ -45,6 +50,7 @@ ezforms:{
 
 ```
 
+
 ### Example Configuration
 
 ```
@@ -79,6 +85,19 @@ ezforms:{
 }
 ```
 
+
+#### No Captcha No Notifications (Only DB) Config
+
+```
+ezforms:{
+    config:{
+      captchaProvider: {
+        name: 'none',
+      },
+      notificationProviders: []
+    }
+}
+```
 ### Strapi Admin Panel Configuration
 
 After you install this plugin you will see 2 new collections in the admin panel.
