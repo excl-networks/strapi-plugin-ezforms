@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/25715982/152631378-2964a94b-bc53-435f-9812-c2880e497cb3.png" alt="EZ forms"/>
+</p>
+
 # Strapi Forms Plugin
 
 This plugin allows you to easily consume forms from your front end and automatically reject spam, send out
