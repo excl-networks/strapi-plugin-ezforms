@@ -2,7 +2,7 @@
 
 module.exports = {
   async index(ctx) {
-    let verification
+    let verification = {}
     // Checks if there is a captcha provider
     if (!(strapi.config.get('plugin.ezforms.captchaProvider.name') === 'none') && (strapi.config.get('plugin.ezforms.captchaProvider.name'))) {
       verification = await strapi.plugin('ezforms').service(strapi.config.get('plugin.ezforms.captchaProvider.name')).validate(ctx.request.body.token)
