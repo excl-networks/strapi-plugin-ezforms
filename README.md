@@ -119,6 +119,14 @@ These are all of the people that need to be notified of the submission.
 
 _Number must be in E164 format_
 
+#### Permission Setup
+
+Under `Settings` > `User & Permissions Plugin` > `Roles` 
+
+You can define which roles can submit to the EZ Forms endpoint. If you want anyone to be able to submit select `Public` if you only want authenicated users to submit forms select `Authenticated` Or selected a custom role.
+
+![image](https://user-images.githubusercontent.com/25715982/155970840-38801141-bce8-4a1f-9750-5a7600ccb8cc.png)
+
 ## Captcha Providers
 If you would like to not use a Captcha use this configuration
 
@@ -210,6 +218,11 @@ Everything within the formData object will be sent as a notification and stored 
     //Perform action in always
   });
 ```
+## Issues
+
+All general issues should be submitted through the [Github issue system](https://github.com/excl-networks/strapi-plugin-ezforms/issues)
+
+If you find a security issue please do not publicly post it instead send an email to support@exclnetworks.com with "EZ Forms Security Issue" as the subject
 
 ## Links
 
