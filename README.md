@@ -105,7 +105,7 @@ After you install this plugin you will see 2 new collections in the admin panel.
 #### Form Submissions
 
 This will store all of your form submissions. There are 2 parts to this collection. There is the score section which
-corresponds to the captcha score (if you have captcha disabled it will display -1) 
+corresponds to the captcha score (if you have captcha disabled it will display -1) The second part is the actual form data in JSON form.
 #### Notification Recipients
 These are all of the people that need to be notified of the submission.
 
