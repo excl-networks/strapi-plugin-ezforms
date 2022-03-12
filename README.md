@@ -5,6 +5,8 @@
 
 # Strapi Forms Plugin
 
+_This plugin only supports Strapi v4_
+
 This plugin allows you to easily consume forms from your front end and automatically reject spam, send out
 notifications, and store the data in your database.
 
