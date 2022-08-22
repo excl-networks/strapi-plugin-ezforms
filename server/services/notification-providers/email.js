@@ -1,15 +1,13 @@
 'use strict';
+let formatData = require('../../utils/formatData');
 module.exports = ({strapi}) => ({
-  async send(config, data){
+  async send(config, data) {
     let recipients = await strapi.query('plugin::ezforms.recipient').findMany();
-    let message = ""
     //Loop through data and construct message from data object
-    for(let key in data){
-      message += `${key}: ${data[key]}\n`
-    }
+    let message = formatData(data);
     //loop through the recipients and send an email
-    for(let recipient of recipients){
-      try{
+    for (let recipient of recipients) {
+      try {
         await strapi.plugins['email'].services.email.send({
           to: recipient.email,
           from: config.from,
@@ -25,3 +23,5 @@ module.exports = ({strapi}) => ({
 
 
 });
+
+
