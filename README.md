@@ -163,6 +163,7 @@ _Note that the from field is required and will not use the Strapi default from_
   name: 'email',
   enabled: true,
   config: {
+    subject: "Your Custom Subject", // Optional
     from: 'noreply@m.domain.com'
   }
 },
