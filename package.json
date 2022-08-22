@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-ezforms",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "This is the description of the plugin.",
   "strapi": {
     "name": "ezforms",
