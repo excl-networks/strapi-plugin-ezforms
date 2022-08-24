@@ -33,7 +33,7 @@ module.exports = {
       }
     }
 
-    //sends notifications
+    // Sends notifications
     for (const provider of strapi.config.get(
       "plugin.ezforms.notificationProviders"
     )) {
@@ -42,7 +42,7 @@ module.exports = {
           await strapi
             .plugin("ezforms")
             .service(provider.name)
-            .send(provider.config, ctx.request.body.formData);
+            .send(provider.config, ctx.request.body);
         } catch (e) {
           strapi.log.error(e);
           ctx.internalServerError("A Whoopsie Happened");
