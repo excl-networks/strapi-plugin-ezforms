@@ -26,7 +26,7 @@ module.exports = {
         } else if (verification.code === 400) {
           ctx.badRequest((errorMessage = verification.message));
         } else {
-          ctx.internalServerError((errorMessage = "Captcha invalid"));
+          ctx.internalServerError((errorMessage = "There was an error"));
         }
 
         return ctx.internalServerError(errorMessage);
