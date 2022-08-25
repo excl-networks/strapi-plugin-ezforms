@@ -1,5 +1,5 @@
-'use strict';
+'use strict'
 
-module.exports = require('./server');
+module.exports = require('./server')
 
 

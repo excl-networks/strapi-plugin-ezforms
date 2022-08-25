@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 
-const recaptcha = require('./captcha-providers/recaptcha');
-const email = require('./notification-providers/email');
-const twilio = require('./notification-providers/twilio');
+const recaptcha = require('./captcha-providers/recaptcha')
+const email = require('./notification-providers/email')
+const twilio = require('./notification-providers/twilio')
 
 module.exports = {
-  recaptcha,
-  email,
-  twilio
-};
+    recaptcha,
+    email,
+    twilio
+}
