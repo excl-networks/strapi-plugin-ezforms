@@ -12,6 +12,6 @@ jobs:
       - name: Install modules
         working-directory: ./
         run: npm ci
-      - name: Run Linter
+      - name: Run Tests
         working-directory: ./
         run: npm run test
