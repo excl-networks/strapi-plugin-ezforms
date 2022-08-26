@@ -242,8 +242,8 @@ If you find a security issue please do not publicly post it instead send an emai
  - [ ] Allow providers to be extendable on a per project basis (similar to how email providers work)
  - [ ] Allow selection which notifications are sent to which people
  - [ ] Convert to TS
- - [ ] Add eslint
- - [ ] Remove Twilio SDK in favor of HTTP
+ - [x] Add eslint
+ - [x] Remove Twilio SDK in favor of HTTP
 
 ## ⭐️Did you find this helpful?
 If you found this plugin helpful give it a star?
