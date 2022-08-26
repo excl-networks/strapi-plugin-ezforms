@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "twilio": "^3.71.2"
   },
   "scripts": {
     "lint:js": "eslint --ext \".js\" --ignore-path .gitignore .",

@@ -14,4 +14,4 @@ jobs:
         run: npm ci
       - name: Run Linter
         working-directory: ./
-        run: npm run tests
+        run: npm run test
