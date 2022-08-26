@@ -13,7 +13,7 @@
   "scripts": {
     "lint:js": "eslint --ext \".js\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": {
     "name": "Excl Networks Inc."
