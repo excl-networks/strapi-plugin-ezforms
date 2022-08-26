@@ -8,7 +8,7 @@
     "kind": "plugin"
   },
   "dependencies": {
-    "axios": "^0.24.0",
+    "axios": "^0.24.0"
   },
   "scripts": {
     "lint:js": "eslint --ext \".js\" --ignore-path .gitignore .",
