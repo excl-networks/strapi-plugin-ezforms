@@ -3,5 +3,5 @@
 const submitController = require('./submit-controller')
 
 module.exports = {
-    submitController,
+  submitController,
 }

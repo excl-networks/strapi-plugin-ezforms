@@ -10,14 +10,14 @@ const services = require('./services')
 const contentTypes = require('./content-types')
 
 module.exports = {
-    register,
-    bootstrap,
-    destroy,
-    config,
-    controllers,
-    routes,
-    services,
-    contentTypes,
-    policies: {},
-    middlewares: {},
+  register,
+  bootstrap,
+  destroy,
+  config,
+  controllers,
+  routes,
+  services,
+  contentTypes,
+  policies: {},
+  middlewares: {},
 }

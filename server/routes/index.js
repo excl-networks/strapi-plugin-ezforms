@@ -1,5 +1,5 @@
 'use strict'
 
 module.exports = {
-    submit: require('./submit'),
+  submit: require('./submit'),
 }

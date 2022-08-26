@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-ezforms",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "This is the description of the plugin.",
   "strapi": {
     "name": "ezforms",
@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "babel-eslint": "^10.1.0",
     "twilio": "^3.71.2"
   },
   "scripts": {
     "lint:js": "eslint --ext \".js\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js"
+    "lint": "npm run lint:js",
+    "test": "jest --watchAll --verbose"
   },
   "author": {
     "name": "Excl Networks Inc."
@@ -34,6 +34,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.22.0"
+    "@types/jest": "^28.1.8",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.22.0",
+    "jest": "^28.1.3",
+    "jest-mock-axios": "^4.6.1"
   }
 }

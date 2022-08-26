@@ -2,22 +2,22 @@
 
 
 module.exports = {
-    default: {
-        captchaProvider: {
-            name: 'none',
-            config: {}
-        },
-        notificationProviders: [
-            {
-                name: 'email',
-                enabled: false,
-                config: {
-                    from: 'noreply@strapi.io',
-                    subject: 'New Contact Form Submission',
-                }
-            }
-        ]
+  default: {
+    captchaProvider: {
+      name: 'none',
+      config: {}
     },
-    validator() {
-    },
+    notificationProviders: [
+      {
+        name: 'email',
+        enabled: false,
+        config: {
+          from: 'noreply@strapi.io',
+          subject: 'New Contact Form Submission',
+        }
+      }
+    ]
+  },
+  validator() {
+  },
 }
