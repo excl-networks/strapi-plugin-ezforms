@@ -23,7 +23,7 @@ module.exports = ({ strapi }) => ({
     for (const provider of strapi.config.get('plugin.ezforms.notificationProviders')) {
       if (provider.enabled) {
         try {
-          await strapi.plugin('ezforms').service(provider.name).send(provider.config, ctx.request.body.formData)
+          await strapi.plugin('ezforms').service(provider.name).send(provider.config, strapi.config.get('plugin.ezforms.enableFormName') === true ? ctx.request.body.formName : "form", ctx.request.body.formData)
         } catch (e) {
           strapi.log.error(e)
           ctx.internalServerError('A Whoopsie Happened')
@@ -34,13 +34,24 @@ module.exports = ({ strapi }) => ({
     // Adds to DB
     let parsedScore = verification.score || -1
     try {
-      await strapi.query('plugin::ezforms.submission').create({
-        data: {
-          score: parsedScore,
-          data: ctx.request.body.formData,
+      if(strapi.config.get('plugin.ezforms.enableFormName') === true) {
+        await strapi.query('plugin::ezforms.submission').create({
+          data: {
+            score: parsedScore,
+            formName: ctx.request.body.formName,
+            data: ctx.request.body.formData,
+          }
         }
+        )
+      } else {
+        await strapi.query('plugin::ezforms.submission').create({
+          data: {
+            score: parsedScore,
+            data: ctx.request.body.formData,
+          }
+        }
+        )
       }
-      )
     } catch (e) {
       strapi.log.error(e)
       return ctx.internalServerError('A Whoopsie Happened')
