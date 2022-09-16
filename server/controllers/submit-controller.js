@@ -34,24 +34,14 @@ module.exports = ({ strapi }) => ({
     // Adds to DB
     let parsedScore = verification.score || -1
     try {
-      if(strapi.config.get('plugin.ezforms.enableFormName') === true) {
-        await strapi.query('plugin::ezforms.submission').create({
-          data: {
-            score: parsedScore,
-            formName: ctx.request.body.formName,
-            data: ctx.request.body.formData,
-          }
+      await strapi.query('plugin::ezforms.submission').create({
+        data: {
+          score: parsedScore,
+          formName: strapi.config.get('plugin.ezforms.enableFormName') === true ? ctx.request.body.formName : "form",
+          data: ctx.request.body.formData,
         }
-        )
-      } else {
-        await strapi.query('plugin::ezforms.submission').create({
-          data: {
-            score: parsedScore,
-            data: ctx.request.body.formData,
-          }
-        }
-        )
       }
+      )
     } catch (e) {
       strapi.log.error(e)
       return ctx.internalServerError('A Whoopsie Happened')
