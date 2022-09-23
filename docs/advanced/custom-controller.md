@@ -4,7 +4,7 @@ EzForms comes with a default controller that handles the form submission. Howeve
 
 ## Overriding
 
-You can create a custom controlling by following the instructions in the [Official Strapi Docs](https://docs.strapi.io)
+You can create a custom controlling by following the instructions in the [Official Strapi Docs](https://docs.strapi.io/developer-docs/latest/development/backend-customization/controllers.html)
 
 
 ### Captcha Providers
