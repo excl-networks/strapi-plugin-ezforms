@@ -12,6 +12,15 @@ describe('Email Notification Provider', function () {
       log: {
         error: jest.fn()
       },
+      plugin: function () {
+        return {
+          service: function () {
+            return {
+              formatData: jest.fn()
+            }
+          }
+        }
+      },
       plugins: {
         email: {
           services: {

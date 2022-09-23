@@ -14,6 +14,15 @@ describe('Twilio Notification Provider', function () {
       log: {
         error: jest.fn()
       },
+      plugin: function () {
+        return {
+          service: function () {
+            return {
+              formatData: jest.fn()
+            }
+          }
+        }
+      },
       plugins: {
         email: {
           services: {
@@ -65,7 +74,8 @@ describe('Twilio Notification Provider', function () {
 
   })
   test('should send sms twice', async function () {
-    jest.spyOn(axios, 'post').mockImplementation(() => {})
+    jest.spyOn(axios, 'post').mockImplementation(() => {
+    })
     let result = await twilioProvider({strapi}).send(config, data)
     expect(result).toEqual(true)
     expect(axios.post).toHaveBeenCalledTimes(2)
