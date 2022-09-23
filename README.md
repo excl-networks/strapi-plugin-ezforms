@@ -17,7 +17,7 @@ _The objective of ez forms is to have a really simple and fast way to integrate 
 
 ## Docs
 
-[Go To Documentation](ezforms.excl.dev)
+[Go To Documentation](https://ezforms.excl.dev)
 
 
 ## Issues
