@@ -3,7 +3,7 @@
 module.exports = ({ strapi }) => ({
   async index(ctx) {
     let verification = {}
-    let formName = strapi.config.get('plugin.ezforms.enableFormName') ? ctx.request.body.formName : "form"
+    let formName = strapi.config.get('plugin.ezforms.enableFormName') ? ctx.request.body.formName : 'form'
     // Checks if there is a captcha provider
     if (!(strapi.config.get('plugin.ezforms.captchaProvider.name') === 'none') && (strapi.config.get('plugin.ezforms.captchaProvider.name'))) {
       verification = await strapi.plugin('ezforms').service(strapi.config.get('plugin.ezforms.captchaProvider.name')).validate(ctx.request.body.token)
