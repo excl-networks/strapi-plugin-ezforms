@@ -1,6 +1,5 @@
 'use strict'
 const axios = require('axios')
-let formatData = require('../../utils/formatData')
 module.exports = ({strapi}) => ({
   async send(config, data) {
     let TWILIO_ACCOUNT_SID = config.accountSid
@@ -9,7 +8,7 @@ module.exports = ({strapi}) => ({
     let recipients = await strapi.query('plugin::ezforms.recipient').findMany()
     let message = 'New Form Submission: ' + '\n'
     //Loop through data and construct message from data object
-    message += formatData(data)
+    message += strapi.plugin('ezforms').service('formatData').formatData(data)
     //loop through the recipients and send an email
     for (let recipient of recipients) {
       if (!recipient.number) {
