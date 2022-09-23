@@ -7,6 +7,7 @@ module.exports = {
       name: 'none',
       config: {}
     },
+    enableFormName: false,
     notificationProviders: [
       {
         name: 'email',

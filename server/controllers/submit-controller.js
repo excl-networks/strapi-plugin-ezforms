@@ -3,6 +3,7 @@
 module.exports = ({ strapi }) => ({
   async index(ctx) {
     let verification = {}
+    let formName = strapi.config.get('plugin.ezforms.enableFormName') ? ctx.request.body.formName : "form"
     // Checks if there is a captcha provider
     if (!(strapi.config.get('plugin.ezforms.captchaProvider.name') === 'none') && (strapi.config.get('plugin.ezforms.captchaProvider.name'))) {
       verification = await strapi.plugin('ezforms').service(strapi.config.get('plugin.ezforms.captchaProvider.name')).validate(ctx.request.body.token)
@@ -23,7 +24,7 @@ module.exports = ({ strapi }) => ({
     for (const provider of strapi.config.get('plugin.ezforms.notificationProviders')) {
       if (provider.enabled) {
         try {
-          await strapi.plugin('ezforms').service(provider.name).send(provider.config, ctx.request.body.formData)
+          await strapi.plugin('ezforms').service(provider.name).send(provider.config, formName, ctx.request.body.formData)
         } catch (e) {
           strapi.log.error(e)
           ctx.internalServerError('A Whoopsie Happened')
@@ -37,6 +38,7 @@ module.exports = ({ strapi }) => ({
       await strapi.query('plugin::ezforms.submission').create({
         data: {
           score: parsedScore,
+          formName: formName,
           data: ctx.request.body.formData,
         }
       }
