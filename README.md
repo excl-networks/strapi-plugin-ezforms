@@ -24,7 +24,7 @@ _The objective of ez forms is to have a really simple and fast way to integrate 
 
 All general issues should be submitted through the [Github issue system](https://github.com/excl-networks/strapi-plugin-ezforms/issues)
 
-If you find a security issue please do not publicly post it instead send an email to support@exclnetworks.com with "EZ Forms Security Issue" as the subject
+Security issues should be reported using the [security tab](https://github.com/excl-networks/strapi-plugin-ezforms/security)
 
 ## Links
 
