@@ -9,5 +9,3 @@ mkdir -p /workspaces/strapi-wrapper/src/plugins
 ln -s /workspaces/strapi-plugin-ezforms /workspaces/strapi-wrapper/src/plugins/strapi-plugin-ezforms 
 cd /workspaces/strapi-plugin-ezforms
 yarn install
-cd /workspaces/strapi-wrapper
-yarn develop
