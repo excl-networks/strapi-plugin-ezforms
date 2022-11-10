@@ -1,0 +1,11 @@
+{
+    "extensions": [
+      "GitHub.github-vscode-theme",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "stylelint.vscode-stylelint"
+      // Additional Extensions Here
+    ],
+    "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc", //Set Terminal Prompt to $
+    "postStartCommand": "./setup.sh" //Start the app
+  }
