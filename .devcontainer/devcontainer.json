@@ -6,6 +6,5 @@
       "stylelint.vscode-stylelint"
       // Additional Extensions Here
     ],
-    "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc", //Set Terminal Prompt to $
-    "postStartCommand": "./setup.sh" //Start the app
+    "onCreateCommand": "bash .devcontainer/setup.sh" //Set Terminal Prompt to $
   }
