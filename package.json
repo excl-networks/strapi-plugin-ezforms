@@ -10,6 +10,9 @@
   "dependencies": {
     "axios": "^0.24.0"
   },
+  "peerDependencies": {
+    "@strapi/strapi": "^4.5.6"
+  },
   "scripts": {
     "lint:js": "eslint --ext \".js\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
