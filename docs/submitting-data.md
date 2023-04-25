@@ -25,7 +25,7 @@ Everything within the formData object will be sent as a notification and stored 
       fname: 'John',
       lname: 'Doe',
   }
-  let token = 'recaptcha token',
+  let token = 'recaptcha token';
 
   axios.post('http://localhost:1337/api/ezforms/submit', {token, formData: form})
     .then((res) => {
