@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-ezforms",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Easy way to integrate forms into your Strapi app",
   "strapi": {
     "name": "ezforms",
