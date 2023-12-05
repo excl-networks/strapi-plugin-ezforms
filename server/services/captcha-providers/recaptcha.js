@@ -28,6 +28,7 @@ module.exports = ({strapi}) => ({
 
     if (!recaptcha_verify.data.success) {
       strapi.log.error('recaptcha_verify')
+      strapi.log.error(recaptcha_verify)
       return {
         valid: false,
         message: 'Unable to verify captcha',
