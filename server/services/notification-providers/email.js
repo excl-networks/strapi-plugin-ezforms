@@ -19,7 +19,7 @@ module.exports = ({strapi}) => ({
           sendObj.text = message
         }
 
-        await strapi.plugins['email'].services.email.send()
+        await strapi.plugins['email'].services.email.send(sendObj)
       } catch (e) {
         strapi.log.error(e)
       }
