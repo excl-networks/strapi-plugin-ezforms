@@ -27,6 +27,8 @@ _This config will only store form data in the Form Submissions Strapi Collection
 |`notificationProviders[].enabled`|If you want this provider to be enabled|Boolean|
 |`notificationProviders[].config`|Notification Provider Config|Object|
 |`enableFormName`|Allow arbitrary form names set by client|Boolean|
+|`allowUnsafeHtmlAsMessage`|Passes the formated message as html UNSAFE YOU MUST OVERRIDE FORMAT|Boolean|
+
 
 
 ## Strapi Admin Panel Configuration
