@@ -7,10 +7,10 @@ Submit data as a JSON object with this format:
 ```
 {
   token: 'your-recaptcha-token',
-  formName: 'Test Form' // Optional, need to set enableFormName to true in your config to attatch this to database record. 
+  formName: 'Test Form', // Optional, need to set enableFormName to true in your config to attatch this to database record. 
   formData:{
     name: 'John Doe',
-    email: 'test@gmail.com'
+    email: 'test@gmail.com',
     message: 'Hello World'
   }
 }
